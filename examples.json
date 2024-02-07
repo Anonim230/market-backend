@@ -1,0 +1,41 @@
+{
+    "user": {
+        "get": {
+            "req.query.username": [
+                "string",
+                "required"
+            ],
+            "req.body.password": [
+                "string",
+                "required"
+            ]
+        },
+        "post": {
+            "req.query.username": [
+                "string",
+                "required"
+            ],
+            "req.body.password": [
+                "string",
+                "required"
+            ],
+            "req.body.email": [
+                "string"
+            ],
+            "inviter": {
+                "req.body.inviter.username": [
+                    "string",
+                    "required"
+                ],
+                "req.body.inviter.password": [
+                    "string",
+                    "required"
+                ],
+                "required": "false",
+                "isAdmin": {
+                    "description": "Если inviter является админом тогда можно поставить значение isAdmin на true"
+                }
+            }
+        }
+    }
+}
